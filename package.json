@@ -1,6 +1,6 @@
 {
   "name": "maastrich-database",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Database service simple provider for maastrich project",
   "main": "dist/index.js",
   "repository": "https://github.com/Maastrich/maastrich-database.git",
