@@ -43,9 +43,9 @@ function Database(name: string = '') {
   const db = database.getDatabase(name);
     return {
       get: (collection: string, opt?: object) => db.get(collection, opt),
-      post: db.post,
-      put: db.put,
-      delete: db.delete,
+      post: (collection: string, data: any) => db.post(collection, data),
+      put: (collection: string, data :any, filter: object) => db.put(collection, data, filter),
+      delete: (collection: string, filter: object) => db.delete(collection, filter),
     };
 }
 

@@ -47,9 +47,9 @@ function Database(name) {
     var db = database.getDatabase(name);
     return {
         get: function (collection, opt) { return db.get(collection, opt); },
-        post: db.post,
-        put: db.put,
-        delete: db.delete,
+        post: function (collection, data) { return db.post(collection, data); },
+        put: function (collection, data, filter) { return db.put(collection, data, filter); },
+        delete: function (collection, filter) { return db.delete(collection, filter); },
     };
 }
 exports.database = Database;
