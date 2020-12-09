@@ -20,7 +20,7 @@ class Mongo implements DatabaseProvider {
     return this.database.collection(collection).find(filter);
   }
 
-  async post(collection: string, data :string): Promise<any> {
+  async post(collection: string, data :any): Promise<any> {
     if (!this.database) { throw new Error('Trying to access a non connected database'); }
     return this.database.collection(collection).insertOne(data);
   }
